@@ -23,13 +23,12 @@ public interface Function<I, O> {
      * @param <T> the input (and output) type of the function
      */
     static <T> Function<T, T> identity() {
-        final var identityFunction = new Function<T,T>() {
+        return new Function<T,T>() {
 
             public T call (T input) {
                 return input;
             }
         };
-        return identityFunction;
     }
 
 }
